@@ -6,7 +6,7 @@ import LogoFlowBite from "../assets/logo-flowbite.svg";
 const Navbar = () => {
   const { isAuthenticated, logout, user } = useAuth();
   return (
-    <nav className="bg-zinc-700 my-3 flex justify-between py-2 px-4 rounded-lg items-center flex-col sm:flex-row gap-4">
+    <nav className="bg-zinc-700 flex justify-between py-2 px-4 rounded-lg items-center flex-col sm:flex-row gap-4">
       <h1 className="text-2xl font-bold">
         <Link className="flex gap-2" to={isAuthenticated ? "/posts" : "/"}>
           <span>
@@ -23,9 +23,19 @@ const Navbar = () => {
         {isAuthenticated ? (
           <>
             <li>Welcome {user.username}</li>
+
             <li>
               <ButtonLink to="/add-post">Publicar</ButtonLink>
             </li>
+
+            <li>
+              <ButtonLink to="/Btrabajo">Bolsa de trabajo</ButtonLink>
+            </li>
+
+            <li>
+              <ButtonLink to="/Productos">Productos</ButtonLink>
+            </li>
+
             <li>
               <Link to="/" onClick={() => logout()}>
                 Salir

@@ -1,1 +1,1 @@
-export const API_URL = import.meta.env.VITE_API_URL|| "https://api-nocountry.vercel.app/api/v1";
+export const API_URL = import.meta.env.VITE_API_URL|| "http://localhost:4000/api/v1";
