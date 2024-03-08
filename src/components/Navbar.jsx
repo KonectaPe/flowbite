@@ -23,6 +23,9 @@ const Navbar = () => {
         {isAuthenticated ? (
           <>
             <li>Welcome {user.username}</li>
+            <li>
+              <ButtonLink to="/">Inicio</ButtonLink>
+            </li>
 
             <li>
               <ButtonLink to="/add-post">Publicar</ButtonLink>
